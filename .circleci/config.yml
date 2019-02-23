@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: tiryoh/ubuntu:xenial
+    steps:
+      - checkout
+      - run:
+          name: lottery
+          command: python3 order_lottery.py
+      - store_artifacts:
+          path: ./result.txt
+          destination: result.txt
