@@ -11,8 +11,8 @@ if __name__ == "__main__":
         names = [s.strip() for s in f.readlines()]
     names = [x for x in names if x]
     order = random.sample(names, len(names))
-    print(names)
-    print(order)
+    print("input", names)
+    print("result", order)
     with open(PATH_TO_RESULT, mode="w") as f:
         for name in order:
             f.write(name+"\n")
